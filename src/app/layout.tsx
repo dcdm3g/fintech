@@ -1,4 +1,4 @@
-import { StyledComponentsRegistry } from '@/lib/styled-components'
+import { StyledComponentsProvider } from '@/lib/styled-components'
 import type { Metadata } from 'next'
 import { Inter } from 'next/font/google'
 import type { ReactNode } from 'react'
@@ -20,7 +20,7 @@ export default function RootLayout({ children }: RootLayoutProps) {
   return (
     <html lang="en">
       <body className={inter.className}>
-        <StyledComponentsRegistry>{children}</StyledComponentsRegistry>
+        <StyledComponentsProvider>{children}</StyledComponentsProvider>
       </body>
     </html>
   )
